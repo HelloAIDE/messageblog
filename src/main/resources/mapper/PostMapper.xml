@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.dao.PostDao">
+	<!-- 查询帖子开始 -->
+	
+	<select id="findPostAll" parameterType="string" resultType="com.blog.entity.Post">
+			select 
+				p.id,
+				p.title,          
+				left(p.content,50) as content,        
+				p.city,           
+				p.type,           
+				p.u_id  as uId,
+				u.name as other,            
+				p.createtime,     
+				p.lastmodifytime, 
+				p.index_top,            
+				p.index_hot,            
+				p.index_essence,
+				p.view_number,         
+				p.resources  ,
+				p.state    
+			from 
+				post p JOIN user u
+			ON 
+				p.u_id = u.id
+
+	</select>
+	
+	<select id="findPostById" parameterType="string" resultType="com.blog.entity.Post">
+		
+			select 
+				p.id,
+				p.title,          
+				left(p.content,50) as content,        
+				p.city,           
+				p.type,           
+				p.u_id  as uId,
+				u.name as other,            
+				p.createtime,     
+				p.lastmodifytime, 
+				p.index_top,            
+				p.index_hot,            
+				p.index_essence,
+				p.view_number,         
+				p.resources  ,
+				p.state    
+			from 
+				post p JOIN user u
+			ON 
+				p.u_id = u.id
+			where
+				p.id=#{id}
+				
+	</select>
+	
+	<select id="findPostByType" parameterType="string" resultType="map">
+		
+			select 
+				p.id,
+				p.title,          
+				left(p.content,50) as content,        
+				p.city,           
+				p.type,           
+				p.u_id  as uId,
+				u.name as other,            
+				p.createtime,     
+				p.lastmodifytime, 
+				p.index_top,            
+				p.index_hot,            
+				p.index_essence,
+				p.view_number,         
+				p.resources  ,
+				p.state    
+			from 
+				post p JOIN user u
+			ON 
+				p.u_id = u.id
+			where
+				p.city = #{city}
+				
+	</select>
+	
+	<select id="findPostByIdAndType" resultType="map">
+		
+			select 
+				p.id,
+				p.title,          
+				left(p.content,50) as content,        
+				p.city,           
+				p.type,           
+				p.u_id  as uId,
+				u.name as other,            
+				p.createtime,     
+				p.lastmodifytime, 
+				p.index_top,            
+				p.index_hot,            
+				p.index_essence,
+				p.view_number,         
+				p.resources  ,
+				p.state    
+			from 
+				post p JOIN user u
+			ON 
+				p.u_id = u.id
+			where
+				p.type = #{0} 
+			AND 
+				p.city = #{1}
+				
+	</select>
+	
+	<select id="findPostByUid" parameterType="string" resultType="map">
+		
+			select 
+				p.id,
+				p.title,          
+				left(p.content,50) as content,        
+				p.city,           
+				p.type,           
+				p.u_id  as uId,
+				u.name as other,            
+				p.createtime,     
+				p.lastmodifytime, 
+				p.index_top,            
+				p.index_hot,            
+				p.index_essence,
+				p.view_number,         
+				p.resources  ,
+				p.state    
+			from 
+				post p JOIN user u
+			ON 
+				p.u_id = u.id
+			where
+				p.u_id = #{uid} 
+				
+	</select>
+	
+	<select id="findPostByState" parameterType="string" resultType="map">
+	
+			select 
+				p.id,
+				p.title,          
+				left(p.content,50) as content,        
+				p.city,           
+				p.type,           
+				p.u_id  as uId,
+				u.name as other,            
+				p.createtime,     
+				p.lastmodifytime, 
+				p.index_top,            
+				p.index_hot,            
+				p.index_essence,
+				p.view_number,         
+				p.resources  ,
+				p.state    
+			from 
+				post p JOIN user u
+			ON 
+				p.u_id = u.id
+			where
+				p.state = #{state} 
+				
+			
+	</select>
+	<!-- 查询帖子结束 -->
+	
+	<!-- 插入帖子开始 -->
+	<insert id="addPost" parameterType="com.blog.entity.Post">
+		insert into 
+			post
+		(
+			title,    
+			content,        
+			city,           
+			type,           
+			u_id,            
+			createtime,     
+			lastmodifytime, 
+			index_top,            
+			index_hot,            
+			index_essence,
+			view_number,         
+			resources,
+			state   
+		)values(
+			#{title},  
+			#{content},        
+			#{city},           
+			#{type},           
+			#{uId},            
+			#{createtime},     
+			#{lastmodifytime}, 
+			#{top},            
+			#{hot},            
+			#{essence}, 
+			#{number},         
+			#{resources}
+			#{state}
+		)
+	
+	</insert>
+	<!-- 插入帖子结束 -->
+	
+	<!-- 更新帖子数据开始 -->
+	<update id="updatePost" parameterType="com.blog.entity.Post">
+		update post
+			set 
+				title=#{title},    
+			content=#{content},        
+			city=#{city},           
+			type=#{type},           
+			u_id=#{uId},            
+			createtime=#{createtime},     
+			lastmodifytime=#{lastmodifytime}, 
+			index_top=#{top},            
+			index_hot=#{hot},            
+			index_essence=#{essence},
+			view_number=#{number},         
+			resources=#{resources},
+			state=#{state}   
+		where
+			id=#{id}
+	</update>
+	
+	
+</mapper>

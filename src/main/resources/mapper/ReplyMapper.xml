@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.dao.ReplyDao">
+	
+	<select id="findAll" resultType="map">
+		select 
+			r_id as id,
+			p_id as postId,
+			parent_id as parentId,
+			u_name as userName,
+			u_id as userId,
+			content,
+			createtime as createTime,
+			state
+		from 
+			reply	
+		order by createtime desc
+		
+	</select>
+	
+	<select id="findReplyById" parameterType="string"  resultType="com.blog.entity.Reply">
+		select 
+			r_id as id,
+			p_id as postId,
+			parent_id as parentId,
+			u_name as userName,
+			u_id as userId,
+			content,
+			createtime as createTime,
+			state
+		from 
+			reply	
+		where 
+			r_id = #{id}
+			order by createtime desc
+	
+	</select>
+	
+	
+	<select id="findReplyByPostId" resultType="map" parameterType="string">
+		select 
+			r_id as id,
+			p_id as postId,
+			parent_id as parentId,
+			u_name as userName,
+			u_id as userId,
+			content,
+			createtime as createTime,
+			state
+		from 
+			reply	
+		where 
+			p_id = #{pid}
+			order by createtime desc
+		
+	</select>
+	
+	<select id="findReplyByUserId" resultType="map" parameterType="string">
+		select 
+			r_id as id,
+			p_id as postId,
+			parent_id as parentId,
+			u_id as userId,
+			content,
+			createtime as createTime,
+			state
+		from 
+			reply	
+		where 
+			u_id = #{uid}
+		order by createtime desc
+	</select>
+	
+	<insert id="addReplye" parameterType="com.blog.entity.Reply">
+	insert into
+		reply
+	(
+		p_id,
+		parent_id,
+		u_name,
+		u_id,
+		content,
+		createtime,
+		state
+	)
+	values(
+		#{postId},
+		#{parentId},
+		#{userName},
+		#{userId},
+		#{content},
+		#{createTime},
+		#{state}
+	)
+	</insert>
+	
+	<update id="update" parameterType="com.blog.entity.Reply">
+		update
+			reply
+		set 
+			p_id=#{postId},
+			parent_id=#{parentId},
+			u_name=#{userName},
+			u_id=#{userId},
+			content=#{content},
+			createtime=#{createTime},
+			state=#{state}
+		where
+			r_id=#{id}	
+	</update>
+</mapper>

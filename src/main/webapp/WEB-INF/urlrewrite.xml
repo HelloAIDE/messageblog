@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlrewrite>
+	<!--
+	 <rule>
+		<from>/login-(\w*).html</from>
+		<to>/user/toLogin.do?username=$1</to>
+	</rule> 
+	-->
+	<!-- 主页 -->
+	<rule>
+		<from>/index.html</from>
+		<to>/toindex.do</to>
+	</rule>
+	<!-- 用户登录 -->
+	<rule>
+		<from>/login.html</from>
+		<to>/user/toLogin.do</to>
+	</rule>
+	<!-- 用户注册 -->
+	<rule>
+		<from>/register.html</from>
+		<to>/user/toadduser.do</to>
+	</rule>
+	<!-- 找回密码 -->
+	<rule>
+		<from>/repass.html</from>
+		<to>/user/torepass.do</to>
+	</rule>
+	<!-- 新密码 -->
+	<rule>
+		<from>/newpass.html</from>
+		<to>/user/newpass.do</to>
+	</rule>
+	<!-- 新密码 -->
+	<rule>
+		<from>/repass/callback.html</from>
+		<to>/user/repass/callback.do</to>
+	</rule>
+	<!-- 用户退出 -->
+	<rule>
+		<from>/logout.html</from>
+		<to>/user/logout.do</to>
+	</rule>
+	<!-- 登陆验证 -->
+	<rule>
+		<from>/checkuser.html</from>
+		<to>/user/checkuser.do</to>
+	</rule>
+	<!-- 帖子列表页 -->
+	<rule>
+		<from>/list.html</from>
+		<to>/post/tolist.do</to>
+	</rule>
+	<!-- 帖子详情页 -->
+	<rule>
+		<from>/fourm/post-(\d*).html</from>
+		<to>/post/postinfo.do?id=$1</to>
+	</rule>
+	<!-- 验证码 -->
+	<rule>
+		<from>/verify.html</from>
+		<to>/user/verify.do</to>
+	</rule>
+	<!-- 出错页自定义-->
+	<rule>
+		<from>/(\w*)([/](\w*))*.html</from>
+		<to>/user/verify.do</to>
+	</rule>
+</urlrewrite>  
