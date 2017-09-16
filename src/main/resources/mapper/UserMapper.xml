@@ -94,7 +94,7 @@
 	
 	
 	<!-- 添加用户 -->
-	<insert id="addUser" parameterType="com.blog.entity.User">
+	<insert id="addUser" parameterType="com.blog.entity.User" >
 		insert into 
 			user
 		(

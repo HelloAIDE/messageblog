@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
 
 import com.blog.entity.User;
-import com.blog.service.UserServiceException;
+import com.blog.service.exception.UserServiceException;
 
 public class UserUtil {
 	public  static  String timeToString(long time,String dataformat){

@@ -11,7 +11,7 @@ import com.blog.entity.Type;
 public interface TypeDao {
 	public Type findTypeByName(String name);
 	public Type findTypeById(String id);
-	public List<Map<String,Type>> findAll();
+	public List<Type> findAll();
 	public void addType(Type type);
 	public void update(Type type);
 }

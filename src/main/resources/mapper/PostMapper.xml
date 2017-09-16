@@ -26,6 +26,9 @@
 				post p JOIN user u
 			ON 
 				p.u_id = u.id
+			order by 
+				p.createtime
+			desc
 
 	</select>
 	
@@ -169,7 +172,7 @@
 	<!-- 查询帖子结束 -->
 	
 	<!-- 插入帖子开始 -->
-	<insert id="addPost" parameterType="com.blog.entity.Post">
+	<insert id="addPost" parameterType="com.blog.entity.Post"  useGeneratedKeys="true" keyProperty="id">
 		insert into 
 			post
 		(
@@ -198,7 +201,7 @@
 			#{hot},            
 			#{essence}, 
 			#{number},         
-			#{resources}
+			#{resources},
 			#{state}
 		)
 	

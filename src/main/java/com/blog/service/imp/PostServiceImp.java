@@ -1,4 +1,4 @@
-package com.blog.service;
+package com.blog.service.imp;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,6 +13,8 @@ import com.blog.dao.PostDao;
 import com.blog.dao.TypeDao;
 import com.blog.entity.Post;
 import com.blog.entity.Type;
+import com.blog.service.PostService;
+import com.blog.service.exception.PostServiceException;
 import com.blog.util.SafeUtil;
 import com.blog.util.UserUtil;
 
@@ -25,7 +27,7 @@ public class PostServiceImp implements PostService {
 	@Autowired
 	public TypeDao typedao;
 
-	public void addPost(String title, String content, String city, String type, String uid, String resources) {
+	public Post addPost(String title, String content, String city, String type, String uid, String resources) {
 		Post post = new Post();
 		if (title == null || title.trim().isEmpty()) {
 			throw new PostServiceException("标题不能为空");
@@ -58,6 +60,7 @@ public class PostServiceImp implements PostService {
 		post.setuId(uid);
 		post.setCreatetime(UserUtil.getStringTime());
 		dao.addPost(post);
+		return post;
 	}
 
 	public List<Post> getAllPost() {

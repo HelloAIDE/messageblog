@@ -1,4 +1,4 @@
-package com.blog.service;
+package com.blog.service.exception;
 
 import java.io.Serializable;
 

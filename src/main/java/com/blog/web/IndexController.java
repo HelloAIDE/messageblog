@@ -15,7 +15,7 @@ import com.blog.util.Config;
 public class IndexController {
 	@Autowired
 	private UserService service ;
-	@RequestMapping("/toindex.do")
+	@RequestMapping("/index.do")
 	public String index(HttpServletRequest req,HttpServletResponse res){
 		User u = (User) req.getSession().getAttribute("u");
 		req.setAttribute("title", Config.INDEX);

@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.blog.entity.User;
 import com.blog.service.UserService;
-import com.blog.service.UserServiceException;
+import com.blog.service.exception.UserServiceException;
 import com.blog.util.Config;
 import com.blog.util.FileType;
 import com.blog.util.FileTypeJudge;

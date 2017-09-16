@@ -1,5 +1,7 @@
 package com.blog.service;
 
+import java.util.List;
+
 import com.blog.entity.Type;
 
 public interface TypeService {
@@ -17,7 +19,10 @@ public interface TypeService {
 	 * @param managerId
 	 */
 	public void updateType(String id,String name,String image,String managerId);
-	
+	/**
+	 * 获取所有分类
+	 */
+	public List<Type> findAllType();
 	/**
 	 * 根据id查找分类
 	 */

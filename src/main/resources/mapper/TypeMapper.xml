@@ -29,7 +29,7 @@
 		
 	</select>
 	
-	<select id="findAll" resultType="map">
+	<select id="findAll" resultType="com.blog.entity.Type">
 		select 
 			t_id as id,
 			name,
@@ -37,8 +37,6 @@
 			manager_id as managerId
 		from 
 			type
-	
-		
 	</select>
 	
 	<insert id="addType" parameterType="com.blog.entity.Type">

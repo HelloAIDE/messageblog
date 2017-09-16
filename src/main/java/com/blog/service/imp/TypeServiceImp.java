@@ -1,10 +1,15 @@
-package com.blog.service;
+package com.blog.service.imp;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.blog.dao.TypeDao;
 import com.blog.entity.Type;
+import com.blog.service.TypeService;
+import com.blog.service.exception.TypeServiceException;
 import com.blog.util.Config;
 import com.blog.util.SafeUtil;
 
@@ -51,7 +56,13 @@ public class TypeServiceImp implements TypeService {
 		}
 		dao.update(type);
 	}
-
+	public List<Type> findAllType() {
+		List<Type> types = dao.findAll();
+		if (types == null) {
+			types=new ArrayList<Type>();
+		}
+		return types;
+	}
 	public Type findTypeById(String id) {
 		if (id == null || id.trim().isEmpty()) {
 			throw new TypeServiceException("参数不合法");
@@ -73,5 +84,4 @@ public class TypeServiceImp implements TypeService {
 		}
 		return type;
 	}
-
 }

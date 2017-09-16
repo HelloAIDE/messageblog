@@ -11,6 +11,9 @@
 		<from>/index.html</from>
 		<to>/toindex.do</to>
 	</rule>
+	
+	<!-- 用户相关操作 -->
+	
 	<!-- 用户登录 -->
 	<rule>
 		<from>/login.html</from>
@@ -20,6 +23,11 @@
 	<rule>
 		<from>/register.html</from>
 		<to>/user/toadduser.do</to>
+	</rule>
+	<!-- 用户注册提交地址 -->
+	<rule>
+		<from>/adduser.html</from>
+		<to>/user/adduser.do</to>
 	</rule>
 	<!-- 找回密码 -->
 	<rule>
@@ -46,10 +54,23 @@
 		<from>/checkuser.html</from>
 		<to>/user/checkuser.do</to>
 	</rule>
+	
+	<!-- 帖子相关操作 -->
+	
 	<!-- 帖子列表页 -->
 	<rule>
 		<from>/list.html</from>
 		<to>/post/tolist.do</to>
+	</rule>
+	<!-- 帖子发布页 -->
+	<rule>
+		<from>/sendpost.html</from>
+		<to>/post/toaddpost.do</to>
+	</rule>
+	<!-- 帖子发布提交地址 -->
+	<rule>
+		<from>/addpost.html</from>
+		<to>/post/addpost.do</to>
 	</rule>
 	<!-- 帖子详情页 -->
 	<rule>
@@ -66,4 +87,5 @@
 		<from>/(\w*)([/](\w*))*.html</from>
 		<to>/user/verify.do</to>
 	</rule>
+	
 </urlrewrite>  

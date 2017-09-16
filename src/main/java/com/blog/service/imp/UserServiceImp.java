@@ -1,4 +1,4 @@
-package com.blog.service;
+package com.blog.service.imp;
 
 import java.io.File;
 import java.util.HashMap;
@@ -11,6 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.blog.dao.UserDao;
 import com.blog.entity.User;
+import com.blog.service.UserService;
+import com.blog.service.exception.UserServiceException;
 import com.blog.util.Config;
 import com.blog.util.IOUtil;
 import com.blog.util.Md5;
@@ -24,6 +26,7 @@ public class UserServiceImp implements UserService {
 	@Autowired 
 	private UserDao dao;
 	public void registerUser(String user, String pass, String phone, String qq, String email, String address) {
+		System.out.println("注册方法进入");
 		if(user == null||user.trim().isEmpty())
 		{
 			throw new UserServiceException("用户名不能为空");
@@ -72,7 +75,9 @@ public class UserServiceImp implements UserService {
 		map.put("{username}", user);
 		map.put("{password}", pass);
 		content =  ReplaceUtil.replace(content,map);
+		System.out.println("开始发送邮件");
 		SendEmail.send("注册成功-"+Config.TITLE, email, content);
+		System.out.println("注册成功");
 	}
 	public User checkUserPass(String name,String pass){
 		if(name==null||name.trim().isEmpty())

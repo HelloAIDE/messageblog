@@ -16,7 +16,8 @@ var BASE_URL = "<%=Config.BASE_URL%>";
 function recode(){
 	$("#verify").attr("src","<%=Config.BASE_URL%>verify.html?rand="
 								+ Math.random() * 1000);
-
+	$("#verify").css("width","100");
+	$("#verify").attr("height","50");
 	}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

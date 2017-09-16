@@ -14,7 +14,7 @@ public interface PostService {
 	 * @param uid
 	 * @param resources
 	 */
-	public void addPost(String title,String content,String city,String type,String uid,String resources);
+	public Post addPost(String title,String content,String city,String type,String uid,String resources);
 	/**
 	 * 获取所有帖子
 	 * @return
