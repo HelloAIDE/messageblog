@@ -20,8 +20,8 @@ public class Config {
 	public static String BeforeName = "报员_";
 	public static boolean NEWWINDOW = true;
 	/*-----------------------------地址-----------------------------*/
-	public static String BASE_URL = "http://localhost/Spring_Study/";
-	public static String DEFAULT_TYPE_IMAGE = BASE_URL+"Spring_Study/image/type_default_image.png";
+	public static String BASE_URL = "http://localhost/";
+	public static String DEFAULT_TYPE_IMAGE = BASE_URL+"image/type_default_image.png";
 	public static String ICONURL = "/images/icon.png";
 	
 
