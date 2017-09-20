@@ -1,0 +1,340 @@
+/*内容开始*/
+.main{
+    margin-top: 10px;
+}
+.content .content-wrap{
+
+    position: relative;
+    width:1200px;
+    margin:10px auto;
+}
+.content .content-wrap .slide{
+    width:1200px;
+    position: relative;
+    height:400px;
+    background: #d5d5d5;
+}
+.content .content-wrap .slide .slide-left{
+    position: relative;
+    float: left;
+    width:850px;
+    height:400px;
+    background: #dfd;
+}
+.content .content-wrap .slide .slide-left .slide-list ul li{
+    display: none;
+}
+.content .content-wrap .slide .slide-left .slide-list ul li a img{
+    width:850px;
+    height:400px;
+    background: #000;
+}
+.content .content-wrap .slide .slide-left .slide-list ul .active{
+    display: block;
+}
+.content .content-wrap .slide .slide-left .btn {
+    position: absolute;
+    width: 850px;
+    height: 40px;
+    z-index: 5;
+    left: 0;
+    bottom: 0;
+    font-size:0px;
+}
+
+.content .content-wrap .slide .slide-left .btn li {
+    font-size:12px;
+}
+
+.content .content-wrap .slide .slide-left .btn li a {
+    color: #dcdcdc;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+    height: 40px;
+    width: 170px;
+    line-height: 40px;
+    background:rgba(50, 52, 58, 0.8);
+}
+
+.content .content-wrap .slide .slide-left .btn li.select a {
+    background: #00BCD4;
+}
+.content .content-wrap .slide .slide-right{
+    position: relative;
+    float: right;
+    width:350px;
+    height:400px;
+    background: #fff;
+}
+.content .content-wrap .slide .slide-right .login-head{
+    height:60px;
+    background:rgba(50, 52, 58, 0.8);
+    line-height:60px;
+}
+.content .content-wrap .slide .slide-right .login-head .login-title{
+    font-size:20px;
+    width:350px;
+    text-align: center;
+}
+.content .content-wrap .slide .slide-right .login-from {
+    width:300px;
+   padding: 24px;
+    border:1px solid #ddd;
+    height:290px;
+}
+
+.content .content-wrap .slide .slide-right .login-from .login-from-input{
+    margin-top:20px;
+}
+.content .content-wrap .slide .slide-right .login-from .login-from-input>div{
+    padding-left: 41px;
+    border:1px solid #ddd;
+    margin-top: 8px;
+}
+.content .content-wrap .slide .slide-right .login-from  input{
+    width:253px;
+    padding-left:2px;
+    padding-right: 2px;
+    height:40px;
+}
+.content .content-wrap .slide .slide-right .login-from  input[name=yzm]{
+    width:173px;
+}
+.content .content-wrap .slide .slide-right .login-from .form-item-bg{
+    background-image: url("../img/login_icons.png");
+    background-repeat: no-repeat;
+}
+.form-item-bg-user {
+    position: relative;
+    z-index: 50;
+    background-position: 9px -278px;
+}
+.form-item-bg-lock {
+    background-position: 10px -196px;
+}
+.form-item-bg-captcha {
+    background-position: 10px -114px;
+}
+
+.content .content-wrap .slide .slide-right .login-from-input .login-btn{
+    background: #ddd;
+    color: #fff;
+}
+.btn{
+    padding-left:0px !important;
+    background: #ddd;
+    color: #fff;
+    text-align: center;
+    line-height:35px;
+    padding:2px;
+    height:35px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+.content .content-wrap .slide .slide-right .login-from-input .register-btn{
+    background: #ddd;
+    color: #fff;
+}
+.content .content-wrap .slide .slide-right .login-footer{
+    position: absolute;
+    bottom:0;
+    left:0;
+    height:60px;
+    width:310px;
+}
+.content .content-wrap .slide .slide-right .login-footer .repass{
+    height:60px;
+    text-align: center;
+    line-height:60px;
+}
+
+.content .post{
+    position: relative;
+    margin-top: 10px;
+    /*box-shadow: 2px 10px 20px #888888;*/
+}
+.content .post-left{
+    background: #fff;
+    width:850px;
+    overflow: hidden;
+}
+
+.content .post-left .post-panle{
+    position: relative;
+    width:850px;
+}
+.content .post-left .post-panle  .panle-1{
+    border-top: 1px solid #eaeaea;
+    border-radius: 4px 4px 0 0 !important;
+}
+.content .post-left .post-panle  .panle-2{
+    border-radius: 0px 0px 4px 4px !important;
+}
+.content .post-left .post-panle>.panle{
+    padding:20px ;
+    border-radius:0px;
+    cursor: pointer;
+    display: block;
+    border-right: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;;
+    border-bottom: 1px solid #eaeaea;;
+    height:160px;
+    width:808px;
+
+}
+.content .post-left .post-panle  .panle .post-img{
+    display: inline-block;
+    height:150px;
+    width:220px;
+    margin:4px;
+    border-radius: 5px;
+    border:1px #ddd solid;
+    background: #f6f6f6;
+}
+.content .post-left .post-panle  .panle .post-img a img{
+    height:150px;
+    width:220px;;
+}
+
+.content .post-left .post-panle  .panle .post-content{
+    position: relative;
+    display: block;
+    height:150px;
+    width:550px;
+    margin:4px;
+    overflow: hidden;
+}
+.content .post-left .post-panle  .panle .post-content .post-content-title .type{
+    display: inline-block;
+    padding:3px 6px;
+    color: #fff;
+    font-size:12px;
+    height:20px;
+    line-height:20px;
+    position: relative;
+    top:-8px;
+    margin-right:6px;
+}
+.content .post-left .post-panle  .panle .post-content .post-content-title a h2{
+    display: inline-block;
+    color: rgb(85, 85, 85);
+    overflow: hidden;
+}
+.content .post-left .post-panle  .panle .post-content .content-info{
+    height:90px;
+    overflow: hidden;
+}
+.content .post-left .post-panle  .panle .post-content span{
+    color: #999;
+    font-size:12px;
+    height:20px;
+    line-height:20px;
+    word-wrap:break-word;
+}
+.content .post-left .post-panle  .panle .post-content .content-footer{
+    width:550px;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+.content .post-left .post-panle  .panle .post-content .content-footer .reply-num{
+    background: url("../img/show-num.png") no-repeat ;
+    background-size:20px 20px ;-moz-background-size:100% 100%;
+    height:20px;
+    padding-left: 31px;
+    font-size:14px;
+}
+.content .post-left .post-panle  .panle .post-content .content-footer .post-time{
+    padding-left: 41px;
+    font-size:14px;
+}
+.content .post-right{
+    width:350px;
+}
+.content .post-right .type-panle{
+    margin-left: 10px;
+    display: block;
+    width:340px;
+}
+.content .post-right .type-panle .type-item{
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+    height:80px;
+}
+.content .post-right .type-panle .type-item .type-img{
+    margin-left: 10px;
+    float: left;
+    display: inline-block;
+    height:81px;
+    line-height:81px;
+    width:72px;
+
+}
+.content .post-right .type-panle .type-item .type-img a{
+    display: inline-block;
+}
+.content .post-right .type-panle .type-item .type-img a img{
+    padding:15px;
+    height:51px;
+    width:51px;
+}
+.content .post-right .type-panle .type-item .type-name{
+    float: left;
+    display: inline-block;
+    height:72px;
+    line-height:72px;
+    padding:4px;
+    width:232px;
+    padding-left:20px;
+    font-size:18px;
+}
+.content .post-right .type-panle .type-item .type-name img{
+    position: absolute;
+    right:0;
+    margin-right: 10px;;
+    height:30px;
+    top:15px;
+    line-height:30px;
+    padding: 10px;
+}
+.content .post-right .city-panle{
+    margin-top:10px;
+    width:340px;
+    margin-left: 10px;
+}
+.content .post-right .city-panle .city-item{
+    padding:8px;
+    line-height: 38px;
+    font-size:16px;
+    position: relative;
+    border-bottom: 1px solid #eaeaea;
+}
+.content .post-right .city-panle .city-item span{
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 5px ;
+    padding-right:5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #888888;
+    background: #00BCD4;
+    cursor: pointer;
+}
+/*内容结束*/
+
+
+/*底部开始*/
+.footer{
+    position: relative;
+    margin-top: 20px;
+    background: #fff;
+    height:100px;
+    font-size:12px;
+    color: #999;
+    line-height: 100px;;
+    text-align: center;
+}
+/*底部结束*/

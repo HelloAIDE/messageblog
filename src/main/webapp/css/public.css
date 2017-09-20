@@ -1,0 +1,104 @@
+/*公共部分开始*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none 0;
+    font-family: '微软雅黑';
+    -webkit-font-smoothing: antialiased;
+}
+body{
+    background-color: #f6f6f6;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.clearfix {
+    clear:both
+}
+.yes{
+    color: #22b857;
+}
+.no{
+    color: red;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.panle{
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+}
+.panle .panle-title{
+    font-weight:bold ;;
+    font-size:18px;
+    text-align: center;
+    border-bottom:1px solid #eaeaea;
+    color:#777;
+    height:50px;
+    line-height:50px;
+}
+/*公共头部开始*/
+.head{
+    height:80px;
+    background: #212121;
+    position:relative;
+}
+.head .head-wrap{
+    width:1200px;
+    margin:0 auto;
+}
+/*Logo开始*/
+.head .head-wrap .logo{
+    float: left;
+    height: 80px;
+    width:200px;
+}
+.head .head-wrap .logo a .logo-img{
+    background: url("../img/logo.png") no-repeat center  ;
+    height: 80px;
+    width:200px;
+    background-size:200px 200px;
+}
+/*Logo结束*/
+/*导航开始*/
+.head .head-wrap .nav{
+    height:80px;
+    line-height: 80px;
+    float: right;
+    background: #0097A7;
+}
+.head .head-wrap .nav ul li{
+    height:80px;
+    width:65px;
+    padding:0 15px;
+}
+.head .head-wrap .nav ul li a span{
+    display: inline-block;
+    height:80px;
+    width:65px;
+    text-align: center;
+    color: #fff;
+}
+.head .head-wrap .nav ul li a:hover span{
+     color:#000;
+}
+.head .head-wrap .nav ul .active{
+    background: #00BCD4;
+}
+.head .head-wrap .nav ul .active a span{
+    color:#fff;
+}
+/*导航结束*/
+/*公共头部结束*/
+/*公共部分结束*/
