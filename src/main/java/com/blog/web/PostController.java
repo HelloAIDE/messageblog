@@ -73,26 +73,29 @@ public class PostController {
 	@RequestMapping(value = "tolist.do")
 	public String tolist(HttpServletRequest req, HttpServletResponse res) {
 		req.setAttribute("title", "帖子列表");
-		List<Post> list = service.getAllPost();
-		req.setAttribute("list", list);
+		JsonResult<List<Post>> list = new JsonResult<List<Post>>(service.getAllPost());
+		req.setAttribute("data", list);
 		return "/post/postlist";
 	}
-
 	@RequestMapping(value = "postinfo.do")
 	public String postinfo(HttpServletRequest req, HttpServletResponse res, String id) {
-		Post post = service.findPostById(id);
-		req.setAttribute("title", post.getTitle());
-		req.setAttribute("info", post);
+		req.setAttribute("title", "加载中");
+		req.setAttribute("id", id);
 		return "/post/postinfo";
 	}
-
+	@ResponseBody
+	@RequestMapping(value = "getpostinfo.do")
+	public JsonResult<Post> getPostInfo(String id) {
+		Post post = service.findPostById(id);
+		return new JsonResult<Post>(post);
+	}
+	
 	@ResponseBody
 	@RequestMapping(value = "delete.do")
-	public JsonResult deletePost(HttpServletRequest req, HttpServletResponse res, String id) {
+	public JsonResult<String> deletePost(HttpServletRequest req, HttpServletResponse res, String id) {
 		service.deletePostById(id);
-		return new JsonResult(0, "删除成功");
+		return new JsonResult<String>(0, "删除成功");
 	}
-
 	// 刷新验证码
 	public void recode(HttpServletRequest req) {
 		// 生成随机字串

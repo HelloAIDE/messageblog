@@ -24,8 +24,6 @@ public class ExceptionAspect {
 		} catch (Throwable e) {
 			e.printStackTrace();
 			return new JsonResult(e.getMessage());
-			
 		}
-		
 	}
 }

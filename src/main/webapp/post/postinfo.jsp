@@ -5,9 +5,7 @@
 <html>
 <head>
 <%@ include file="../include/header.jsp"%>
-</head>
-<body style="width: 1000px; margin: 0 auto;">
-	<style>
+<style>
 .item {
 	padding-left: 10px;
 	border-bottom: 1px black solid;
@@ -54,30 +52,21 @@
 	text-align: right;
 }
 </style>
-	<div style="width: 800px;">
-		<div style="text-align: left;">
-			<h1>${info.title }</h1>
-			<p>${info.other }</p>
-			<p>${info.content }</p>
-			<p>${info.type }</p>
+</head>
+<body style="width: 1000px; margin: 0 auto;">
+		<div style="width: 800px;">
+			<div style="text-align: left;">
+				<h1>${id}</h1>
+			</div>
+			回复：
+			<form action="../addreply.do">
+				<textarea id="content" type="text" name="content" placeholder="回复内容"></textarea>
+				<br /> <input type="hidden" name="postid" value="${info.id }" /> <br />
+				<input id="parentid" type="hidden" name="parentid" value="" /> <br />
+				<input type="submit" value="提交" />
+			</form>
+			<div class="huifu" id="replys" sid="${info.id}"></div>
 		</div>
-		回复：
-		<form action="../addreply.do">
-			<textarea id="content" type="text" name="content" placeholder="回复内容"></textarea>
-			<br /> <input type="hidden" name="postid" value="${info.id }" /> <br />
-			<input id="parentid" type="hidden" name="parentid" value="" /> <br />
-			<input type="submit" value="提交" />
-		</form>
-		<div class="huifu" id="replys" sid="${info.id}"></div>
-		<%-- <c:forEach var="reply" items="${reply }">
-		<p></p>
-		<p>用户${reply.userName }回复：<br>${reply.content }</p>
-		<p>回复时间：${reply.createTime }</p>
-		<a href="javascript:reply(${reply.id},'${reply.userName }');">回复</a>
-		<hr/>
-	</c:forEach> --%>
-
-	</div>
 </body>
 <script charset="utf-8" type="text/javascript"
 	src="<%=Config.BASE_URL%>upload/huifu.js"></script>

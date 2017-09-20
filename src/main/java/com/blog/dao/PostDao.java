@@ -14,6 +14,11 @@ public interface PostDao {
 	 */
 	public void addPost(Post post);
 	/**
+	 * 添加一条阅读数量
+	 * @param postid
+	 */
+	public void addPostNum(int postid);
+	/**
 	 * 查找所有帖子
 	 * @return
 	 */

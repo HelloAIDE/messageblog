@@ -75,10 +75,15 @@ public class PostServiceImp implements PostService {
 			throw new PostServiceException("您访问的数据不存在");
 		}
 		Post post = dao.findPostById(id);
+		if(post==null)
+		{
+			throw new PostServiceException("您访问的数据不存在");
+		}
 		String ty = post.getType();
 		Type typ = typedao.findTypeById(ty);
 		String type = typ.getName();
 		post.setType(type);
+		dao.addPostNum(Integer.valueOf(post.getId()));
 		return post;
 	}
 	public void deletePostById(String id) {

@@ -4,52 +4,65 @@
     <meta name="Description" content="我是内容">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script charset="utf-8" type="text/javascript"
-            src="js/jquery.min.js"></script>
+            src="js/jquery.js"></script>
     <script charset="utf-8" type="text/javascript"
             src="js/main.js"></script>
     <script charset="utf-8" type="text/javascript"
             src="js/xianbaoapi.v1.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
+    <!--导入公共CSS-->
     <link rel="stylesheet" type="text/css" href="css/public.css">
+    <!--导入首页CSS-->
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!--导入柱体颜色CSS-->
     <link rel="stylesheet" type="text/css" href="css/palette.css">
     <title>活动API-首页</title>
 </head>
 
-<body>
+<body class="background-color">
 <div class="main">
+    <!--头部开始-->
     <div class="head">
         <div class="head-wrap">
+            <!--LOGO开始-->
             <div class="logo">
                 <a href="#" title="活动API">
                     <div class="logo-img">
                     </div>
                 </a>
             </div>
+            <!--LOGO结束-->
+            <!--导航开始-->
             <div class="nav">
                 <ul>
                     <li class="active"><a href=""><span>首页</span></a></li>
-                  <!--  <li><a href=""><span>首页</span></a></li>
+                   <li><a href=""><span>首页</span></a></li>
                     <li><a href=""><span>首页</span></a></li>
                     <li><a href=""><span>首页</span></a></li>
-                    <li><a href=""><span>首页</span></a></li>-->
+                    <li><a href=""><span>首页</span></a></li>
                 </ul>
             </div>
+            <!--导航结束-->
         </div>
     </div>
+    <!--头部结束-->
+    <!--内容开始-->
     <div class="content">
         <div class="content-wrap">
+            <!--轮播图及登陆部分开始-->
             <div class="slide">
+                <!--轮播图开始-->
                 <div class="slide-left">
                     <div class="slide-list">
                         <ul>
-                            <li class="active">
+                            <li >
                                 <a href="http://lol.te5.com/2016/143407.html" title="免费领取小黄车月卡" target="_blank">
                                     <img src="http://www.huodongapi.cn:8080/Ofo/assets/img/ofologo.png"
                                          alt="免费领取小黄车月卡">
                                 </a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="http://lol.te5.com/2016/143407.html" title="新英雄Camille公布" target="_blank">
                                     <img src="http://img4.18183.duoku.com/uploads/allimg/161118/52-16111QI0120-L.jpg"
                                          alt="新英雄Camille公布">
@@ -77,19 +90,21 @@
                         <li><a href="javascript:;">免费领取小黄车月卡</a></li>
                     </ul>
                 </div>
+                <!--轮播图结束-->
+                <!--登陆区域开始-->
                 <div class="slide-right">
                     <div class="login-head">
                         <div class="login-title text-primary-color"><span>登 陆</span></div>
                     </div>
                     <div class="login-from">
                         <div class="login-from-input">
-                            <div class="form-item-bg form-item-bg-user"><input type="text" placeholder="请输入账号"></div>
+                            <div class="active form-item-bg form-item-bg-user"><input type="text" placeholder="请输入账号"></div>
                             <div class="form-item-bg form-item-bg-lock"><input type="password" placeholder="请输入密码">
                             </div>
                             <div class="form-item-bg form-item-bg-captcha"><input type="text" name="yzm"
                                                                                   placeholder="验证码"> <a
                                     class="secondary-text-color " href="#"> <img
-                                    src="#" alt="验证码"/></a></div>
+                                    src="https://agent.wwwscn.com/index.php?m=Home&c=Public&a=verify" alt="验证码"/></a></div>
                             <div class=" btn default-primary-color">登 陆</div>
                             <div class=" btn default-primary-color">注 册</div>
                         </div>
@@ -98,8 +113,12 @@
                         <a class="fr  secondary-text-color repass" href="#"> <span>忘记密码</span></a>
                     </div>
                 </div>
+                <!--登陆区域结束-->
             </div>
+            <!--轮播图及登陆部分结束-->
+            <!--中部开始-->
             <div class="post">
+                <!--帖子部分开始-->
                 <div class="post-left fl">
                     <div class="post-panle">
                         <div class="panle panle-1">
@@ -304,7 +323,10 @@
                         </div>
                     </div>
                 </div>
+                <!--帖子部分结束-->
+                <!--分类和地区部分开始-->
                 <div class="post-right fr">
+                    <!--分类部分开始-->
                     <div class="type-panle panle">
                         <div class="panle-title">
                             <p>分类</p>
@@ -324,6 +346,8 @@
 
                         </div>
                     </div>
+                    <!--分类部分结束-->
+                    <!--城市部分开始-->
                     <div class=" city-panle panle">
                         <div class="panle-title">
                             <p>地 区</p>
@@ -342,14 +366,20 @@
                             </div>
                         </div>
                     </div>
+                    <!--城市部分结束-->
                 </div>
+                <!--分类和地区部分结束-->
                 <div class="clearfix"></div>
             </div>
+            <!--中部结束-->
         </div>
     </div>
+    <!--内容结束-->
+    <!--底部开始-->
     <div class="footer">
         <span>Powered by 大牛哥 QQ:201309512 ICP备xxxxxxx号</span>
     </div>
+    <!--底部结束-->
 </div>
 </body>
 

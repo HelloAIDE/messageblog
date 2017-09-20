@@ -210,9 +210,10 @@
 	
 	<!-- 更新帖子数据开始 -->
 	<update id="updatePost" parameterType="com.blog.entity.Post">
-		update post
-			set 
-				title=#{title},    
+		update 
+			post
+		set 
+			title=#{title},    
 			content=#{content},        
 			city=#{city},           
 			type=#{type},           
@@ -228,6 +229,13 @@
 		where
 			id=#{id}
 	</update>
-	
+	<update id="addPostNum">
+		update 
+			post
+		set 
+			view_number=view_number+1
+		where 
+			id=#{post_id}
+	</update>	
 	
 </mapper>

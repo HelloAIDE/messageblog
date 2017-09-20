@@ -1,18 +1,15 @@
-/*公共部分开始*/
+/*鍏叡閮ㄥ垎寮�濮�*/
 * {
     padding: 0;
     margin: 0;
     list-style: none;
     border: none 0;
-    font-family: '微软雅黑';
+    font-family: '寰蒋闆呴粦';
     -webkit-font-smoothing: antialiased;
 }
-body{
-    background-color: #f6f6f6;
-}
+
 a {
     text-decoration: none;
-    color: #000;
 }
 li {
     list-style: none;
@@ -34,31 +31,45 @@ li {
 .fr{
     float: right;
 }
+span{
+    transition: background 0.25s,color 0.25s;
+    -moz-transition:background 0.25s,color 0.25s; /* Firefox 4 */
+    -webkit-transition:background 0.25s,color 0.25s; /* Safari and Chrome */
+    -o-transition:background 0.25s,color 0.25s; /* Opera */
+}
+p{
+    transition: background 0.25s,color 0.25s;
+    -moz-transition:background 0.25s,color 0.25s; /* Firefox 4 */
+    -webkit-transition:background 0.25s,color 0.25s; /* Safari and Chrome */
+    -o-transition:background 0.25s,color 0.25s; /* Opera */
+}
 .panle{
-    background: #fff;
-    border-radius: 5px;
     border: 1px solid #eaeaea;
+    border-radius: 5px;
+    transition: background 0.25s,color 0.25s;
+    -moz-transition:background 0.25s,color 0.25s; /* Firefox 4 */
+    -webkit-transition:background 0.25s,color 0.25s; /* Safari and Chrome */
+    -o-transition:background 0.25s,color 0.25s; /* Opera */
 }
 .panle .panle-title{
     font-weight:bold ;;
     font-size:18px;
     text-align: center;
     border-bottom:1px solid #eaeaea;
-    color:#777;
     height:50px;
     line-height:50px;
 }
-/*公共头部开始*/
+/*鍏叡澶撮儴寮�濮�*/
 .head{
     height:80px;
-    background: #212121;
     position:relative;
+    border-bottom: 1px solid #EAEAEA;
 }
 .head .head-wrap{
     width:1200px;
     margin:0 auto;
 }
-/*Logo开始*/
+/*Logo寮�濮�*/
 .head .head-wrap .logo{
     float: left;
     height: 80px;
@@ -70,16 +81,15 @@ li {
     width:200px;
     background-size:200px 200px;
 }
-/*Logo结束*/
-/*导航开始*/
+/*Logo缁撴潫*/
+/*瀵艰埅寮�濮�*/
 .head .head-wrap .nav{
     height:80px;
     line-height: 80px;
     float: right;
-    background: #0097A7;
 }
 .head .head-wrap .nav ul li{
-    height:80px;
+    height:78px;
     width:65px;
     padding:0 15px;
 }
@@ -88,17 +98,8 @@ li {
     height:80px;
     width:65px;
     text-align: center;
-    color: #fff;
 }
-.head .head-wrap .nav ul li a:hover span{
-     color:#000;
-}
-.head .head-wrap .nav ul .active{
-    background: #00BCD4;
-}
-.head .head-wrap .nav ul .active a span{
-    color:#fff;
-}
-/*导航结束*/
-/*公共头部结束*/
-/*公共部分结束*/
+
+/*瀵艰埅缁撴潫*/
+/*鍏叡澶撮儴缁撴潫*/
+/*鍏叡閮ㄥ垎缁撴潫*/
